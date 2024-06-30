@@ -1,0 +1,23 @@
+
+
+React round(3 years of experience)
+1. todo application
+	a. add item
+	b. update item
+	c. search item(from items added)
+	d. delete item
+
+2. Array sorting problem - basic DSA related to Array
+
+3. JS concepts: Clouser, Map, Filter, reduce and polyfill of design.
+
+
+
+React coding taske
+1. Iterate the list --> to do can be a good example
+2. currency converter.
+3.
+
+
+https://codeinterview.io/blog/reactjs-coding-interview-questions/
+https://coderpad.io/interview-questions/react-interview-questions/

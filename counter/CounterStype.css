@@ -1,0 +1,15 @@
+/* .Reset{
+
+    display: block;
+} */
+
+#react-cont{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+/* #InputSection{
+    display: flex;
+    flex-direction: column;
+} */

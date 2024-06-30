@@ -1,0 +1,37 @@
+ npm start
+    Starts the development server.
+
+  npm run build
+    Bundles the app into static files for production.
+
+  npm test
+    Starts the test runner.
+
+  npm run eject
+    Removes this tool and copies build dependencies, configuration files
+    and scripts into the app directory. If you do this, you can’t go back!
+
+npx create-react-app myapp
+    To create react app.
+    app name should be in lower cases.
+
+npm i react-router-dom
+    to install react routers.
+  
+npm install react-bootstrap bootstrap
+    To install boostrap specially made for react.
+ 
+npm install react-player
+    To create a video player on page.
+
+npm install redux react-redux
+    To install redux
+    https://github.com/Utkarshmalik/Scaler_Nov_FullStack/commit/dbb0a5318d17e0736dc0bc717080da38a23574d4
+
+
+npm i axios
+    To install axios
+    https://www.geeksforgeeks.org/axios-in-react-a-guide-for-beginners/
+
+npm i express
+    To install expressJS.
