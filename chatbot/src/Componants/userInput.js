@@ -17,7 +17,6 @@ function UserInputModule() {
         let val = e.target.value;
         console.log(val)
         // console.log({...chatHistory})
-
         setInputVal(val);
     }
 
@@ -33,19 +32,40 @@ function UserInputModule() {
         let newOuterObject = {}
         newOuterObject[curruentDate] = { ...newInnerObject }
         lastChatInput.current = curruentDate;
-        // console.log(newObject)
+        console.log('' + curruentDate)
+        localStorage.setItem('' + curruentDate, JSON.stringify(newInnerObject)) //adding conversation to local storage //JSON.stringigy is deep copy
         setChatHistory({ ...chatHistory, ...newOuterObject }) //using spread operator to set new value of chatHistory object
     }
 
 
     useEffect(() => {
-        // console.log("last Chat input", lastChatInput.current)
+
         //Condition to avoid executing function on first render
+        console.log(Object.keys(chatHistory).length === 0 && localStorage.length != 0)
         if (lastChatInput.current != undefined) {
-            console.log("last Chat input 2", lastChatInput.current)
             BotResponse();
         }
+        //on first render, Check if chatHistory is Empty and localStorage is NOt Empty. and then copy local storage to chatHistory
+        else if (Object.keys(chatHistory).length === 0 && localStorage.length != 0) {
+            var localChatCopy = {}
+            for (let i = 0; i < localStorage.length; i++) {
+                //localStorage.key() = returns the name of key at ith location.
+                //localStorage.getItem() = Returns the valu associated with given key
+                //new Date(): convert the string Date key to Object format.
+                localChatCopy[new Date(localStorage.key(i))] = JSON.parse(localStorage.getItem(localStorage.key(i)))
+                console.log("inside first render logic")
+            }
+            setChatHistory(localChatCopy)
+        }
+
         console.log(chatHistory)
+
+        // var keys = Object.keys(chatHistory)
+        // for (let i = 0; i < keys.length; i++) {
+        //     let date = new Date(keys[i]) 
+        //     console.log(date.getTime());
+        // }
+
     }, [chatHistory])
 
     //BotResponse
